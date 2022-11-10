@@ -1,14 +1,16 @@
 package com.example.bbs.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name="article3")
+@Table(name="article")
 @Getter
 @NoArgsConstructor
+@AllArgsConstructor
 public class Article {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)

@@ -1,6 +1,7 @@
 {{>layouts/header}}
+{{#article}}
 <div class="card" style="width: 18rem;">
-    {{#article}}
+
         <div class="card-body">
             <h5 class="card-title">{{id}}</h5>
             <h6 class="card-subtitle mb-2 text-muted">{{title}}</h6>
@@ -8,6 +9,11 @@
             <a href="/articles/new" class="card-link">new article</a>
             <a href="/articles" class="card-link">articles List</a>
         </div>
-    {{/article}}
+
+
 </div>
+<a href="/articles/{{id}}/edit" class="btn btn-primary">Edit</a>
+<a href="/articles/{{id}}/delete" class="btn btn-danger">Delete</a>
+{{/article}}
+{{^sms_agree}}N{{/sms_agree}}
 {{>layouts/footer}}
