@@ -25,6 +25,8 @@ public class HospitalController {
     public String list(Model model, Pageable pageable){
         Page<Hospital> hospitals = hospitalRepository.findAll(pageable);
         model.addAttribute("hospitals",hospitals);
+        model.addAttribute("previous",pageable.previousOrFirst().getPageNumber());
+        model.addAttribute("next",pageable.next().getPageNumber());
         return "hospitals/list";
 
     }
