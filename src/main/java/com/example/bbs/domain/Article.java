@@ -2,11 +2,13 @@ package com.example.bbs.domain;
 
 import com.example.bbs.domain.dto.ArticleDto;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+@Builder
 @Entity
 @Table(name="article")
 @Getter
